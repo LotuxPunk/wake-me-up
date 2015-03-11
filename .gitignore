@@ -3,3 +3,12 @@
 build/:q
 node_modules/
 vendor/
+devperf/
+src/
+.ftppass
+.idea/
+index.html
+assets/
+archive/
+.DS_Store
+build/
