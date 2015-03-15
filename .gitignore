@@ -3,6 +3,7 @@
 build/:q
 node_modules/
 vendor/
+<<<<<<< HEAD
 devperf/
 src/
 .ftppass
@@ -12,3 +13,9 @@ assets/
 archive/
 .DS_Store
 build/
+=======
+.ftppass
+.idea
+.DS_Store
+devperf/
+>>>>>>> master
