@@ -1,12 +1,8 @@
 node_modules/
 vendor/
-.ftppass
-.idea/
-index.html
-archive/
-.DS_Store
 build/
 .ftppass
 .idea
 .DS_Store
 devperf/
+src/
