@@ -19,7 +19,6 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks('grunt-bump');
   grunt.loadNpmTasks('grunt-coffeelint');
   grunt.loadNpmTasks('grunt-karma');
-  grunt.loadNpmTasks('grunt-ngmin');
   grunt.loadNpmTasks('grunt-html2js');
   grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.loadNpmTasks('grunt-devperf');
@@ -453,7 +452,7 @@ module.exports = function ( grunt ) {
 
     protractor: {
         options: {
-            keepAlive: true,
+            keepAlive: false,
             configFile: "protractor/conf.js"
         },
         run: {}
@@ -662,8 +661,16 @@ module.exports = function ( grunt ) {
 
   /**
    * The default task is to put code in production and bump the version
+   * Done by CodeShip CD
    */
-  grunt.registerTask( 'prod', ['e2e', 'bump', 'ftp-deploy:prod', 'compress'] );
+  grunt.registerTask( 'prod', ['e2e', 'ftp-deploy:prod'] );
+
+ /**
+   * Save the lastest compile scripts in a zip file and bump the project version
+   * //@TODO it is manually done to not push on master and creating an infinite loop with the Codeship CI/CD
+   */
+  grunt.registerTask( 'save', ['bump','build', 'compile', 'compress'] );
+
 
   /**
    * The `build` task gets your app ready to run for development and testing.

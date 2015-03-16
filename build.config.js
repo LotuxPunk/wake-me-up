@@ -93,7 +93,8 @@ module.exports = {
       'assets/js/advertisement.js'
     ],
     css: [
-      'vendor/bootstrap/dist/css/bootstrap.min.css'
+      'src/assets/css/bootstrap-darky-theme.css',
+      //'vendor/bootstrap-material-design/dist/css/material.min.css' //@TODO use material design
     ],
     assets: [
     ]
