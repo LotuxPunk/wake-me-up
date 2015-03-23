@@ -1,8 +1,0 @@
-node_modules/
-vendor/
-build/
-.ftppass
-.idea
-.DS_Store
-devperf/
-src/
