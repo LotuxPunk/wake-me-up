@@ -1,7 +1,15 @@
 var app = angular.module('wakeMeUp.services');
 
-app.factory('cookieService', function($cookies) {
+app.controller('cookieService', function($cookies) {
     var CookieService = function() {};
+    var now = new Date(),
+        exp = new Date(now.getFullYear()+1, now.getMonth(), now.getDate());
+    $cookies.put('url',url,{
+         expires: exp
+    });
+
+var cookie = $cookies.get('someToken');
+console.log(cookie); // logs 'blabla'
 
     CookieService.set = function set(alarm, url){
         // Setting a cookie
